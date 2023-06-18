@@ -1,37 +1,36 @@
 package com.Alti;
 
 public interface Test1 {
-    void s1();
-    void s2();
-    void s3();
-}
-abstract class Test2 implements Test1{
+    void t1();
+    void t2();
 
-    @Override
-    public void s1() {
-        System.out.println("s1 method");
-    }
-
-    @Override
-    public void s2() {
-        System.out.println("s2 method");
-    }
 
 }
-class Test3 extends Test2{
-
+ interface Test2{
+    void t3();
+    void t4();
+}
+class Test3 implements Test1,Test2 {
 
     @Override
-    public void s3() {
-        System.out.println("s3 method");
+    public void t1() {
+        System.out.println("t1 method");
+    }
+
+    @Override
+    public void t2() {
+        System.out.println("t2 method");
+    }
+
+    @Override
+    public void t3() {
+        System.out.println("t3 method");
 
     }
 
-    public static void main(String[] args) {
-        Test3 t= new Test3();
-        t.s1();
-        t.s2();
-        t.s3();
+    @Override
+    public void t4() {
+        System.out.println("t4 method");
     }
 }
 
