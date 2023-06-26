@@ -16,10 +16,16 @@ class Test1 extends Test{
         System.out.println(this.a+this.b);
     }
     public static void main(String[] args){
+        Test t1=new Test();
+        Object o=new Test1();
         Test1 t=new Test1();
         t.m1();
         t.m2();
-
+     System.out.println(t instanceof Test);
+     System.out.println(t instanceof Object);
+     System.out.println(t1 instanceof Object);
+     System.out.println(o instanceof Test1);
+     System.out.println(o instanceof Test);
     }
 }
 
