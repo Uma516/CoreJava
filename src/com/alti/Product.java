@@ -1,24 +1,23 @@
 package com.alti;
 
 public class Product {
-
+  void m1(int a){
+      System.out.println("m1 method");
+  }
 }
 class Test extends Product{
-
-}
-class Demo extends Test{
+    void m1(String b,float f){
+        System.out.println("child method");
+    }
     public static void main(String[] args){
-       Object o =new Object();
-        Product p=new Product();
+        Product p =new Product();
         Test t=new Test();
-        Demo d=new Demo();
-        System.out.println(p instanceof Test);
-        System.out.println(d instanceof Test);
-        System.out.println(d instanceof Product);
-        System.out.println(t instanceof Object);
-        System.out.println(t instanceof Product);
+        t.m1("jon",1.5f);
+        t.m1(10);
+        
     }
 }
+
 
 
 
