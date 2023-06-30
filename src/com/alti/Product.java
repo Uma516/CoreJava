@@ -1,34 +1,21 @@
 package com.alti;
 
 public class Product {
-    Product(){
-        System.out.println("default constructor");
-    }
-  void m1(int a) {
-      System.out.println("m1 method");
-  }
-      void m2(char c){
-      System.out.println("m2 method");
-  }
+    int a=10;
+    int b=20;
 }
-class Test extends Product{
-    Test(String str){
-        System.out.println("one argument constructor");
-
-    }
-    void m1(int a){
-        System.out.println("m1 method");
-    }
-    void m2(char c){
-        System.out.println("m2 method");
+class Product1 extends Product{
+    int a=100;
+    int b=200;
+    void m1(int a,int b){
+        System.out.println(a+b);
+        System.out.println(super.a+super.b);
+        System.out.println(this.a*this.b);
     }
     public static void main(String[] args){
-        Product p =new Product();
-        Test t=new Test("LILLY");
-        t.m2('v');
-        t.m1(10);
+        Product1 p=new Product1();
+        p.m1(1000,2000);
         
-
     }
 }
 
