@@ -1,40 +1,32 @@
 package com.util;
 
 public interface Parent {
-    void m1(int a);
-    void m2(char c);
-}
-interface Parent1 extends Parent{
-    void m1(float f);
-    void m2(String str);
-}
-class Demo implements  Parent1,Parent{
+    void m1();
+    void m2();
+    void m3();
 
-
-    @Override
-    public void m1(int a) {
+}
+abstract class Pro implements Parent{
+     public void m1(){
         System.out.println("m1 method");
+     }
+
+}
+abstract class Pro1 extends Pro{
+    public void m2(){
+        System.out.println("m2 method");
     }
+}
+class Pro2 extends Pro1{
 
     @Override
-    public void m2(char c) {
-System.out.println("m2 method");
-    }
-
-    @Override
-    public void m1(float f) {
-System.out.println("override method");
-    }
-
-    @Override
-    public void m2(String str) {
-System.out.println("override method");
+    public void m3() {
+        System.out.println("m3 method");
     }
     public static void main(String[] args){
-        Demo d=new Demo();
-        d.m1(10);
-        d.m1(1.5f);
-        d.m2('v');
-        d.m2("dia");
+        Pro2 p=new Pro2();
+        p.m3();
+        p.m2();
+        p.m1();
     }
 }
