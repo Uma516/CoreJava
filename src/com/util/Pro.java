@@ -1,13 +1,19 @@
 package com.util;
 
 public class Pro {
-    public static void main(String[] args){
-        System.out.println("ratan".charAt(2));
-        System.out.println("rest of the code");
-        try{
-        System.out.println(10/0);}
-        catch(ArithmeticException ae){
-            System.out.println(10/2);
-        }
-    }
+   void m1(ArithmeticException a){
+       System.out.println("m1 method");
+   }
+   void m2(Exception e){
+       System.out.println("m2 method");
+   }
+   void m3(){
+       System.out.println("m3 method");
+   }
+   public static void main (String[] args){
+      Pro p= new Pro();
+       p.m1(new ArithmeticException());
+       p.m2(new Exception());
+       p.m3();
+   }
 }
