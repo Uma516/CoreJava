@@ -1,15 +1,19 @@
 import java.util.ArrayList;
 
 public class Template {
-    public static void main(String[] args){
-        ArrayList a1=new ArrayList();
-        Integer i=new Integer(10);
-        Character c=new Character('5');
-        Double d=new Double("10.5");
-        a1.add(i);
-        a1.add(c);
-        a1.add(d);
-        System.out.println(a1);
-    }
+    public static void main(String[] args) {
+        ArrayList a1 = new ArrayList();
+        a1.add(10);
+        a1.add("ratan");
+        a1.add('c');
+        a1.add("pinku");
+        a1.add(null);
+        System.out.println("Arraylist=" + a1);
+        System.out.println("Arraylist-->"+a1.size());
+        a1.add(1,"A1");
+      a1.remove(1);
+      a1.remove("A");
+      a1.clear();
 
+    }
 }
