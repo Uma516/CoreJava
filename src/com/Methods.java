@@ -3,32 +3,26 @@ package com;
 import javax.imageio.stream.ImageInputStream;
 
 public class Methods {
-
-    int m1(int id){
-        id=10;
-        System.out.println(id);
-        return 5;
-    }
-    String m2(String b,int c,boolean a){
-        b="jia";
-        c=55;
-        a=false;
-        System.out.println(b);
-        return "hi";
-    }
-    double m3(double e,String g){
-        e=2002;
-        g="nia";
-        System.out.println(e);
-        return 3000;
+ static int m1(int id,float f){
+     System.out.println(id);
+     return 24;
 
     }
+
+static String m2(String s,boolean b,long l){
+    System.out.println(s);
+    return "pinku";
+}
+static  float m3(char c,float t){
+    System.out.println(t);
+    return 200;
+}
 
     public static void main(String[] args) {
-        Methods m=new Methods();
-        m.m1(12);
-        m.m2("kiara",12,true);
-        m.m3(1000,"kite");
+       // Methods m=new Methods();
+        Methods.m1(2,100);
+        Methods.m2("heena",false,500000);
+        Methods.m3('n',600);
 
     }
 }
