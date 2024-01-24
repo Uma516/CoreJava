@@ -4,16 +4,19 @@ import javax.imageio.stream.ImageInputStream;
 
 public class Methods {
  static int m1(int id,float f){
+     id=10;
      System.out.println(id);
      return 24;
 
     }
 
 static String m2(String s,boolean b,long l){
+     s="gia";
     System.out.println(s);
     return "pinku";
 }
 static  float m3(char c,float t){
+     t=20003;
     System.out.println(t);
     return 200;
 }
